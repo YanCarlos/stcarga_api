@@ -17,5 +17,14 @@ module StcargaApi
     config.autoload_paths += %W(#{config.root}/app/services)
     config.api_only = true
     config.debug_exception_response_format = :default
+    Rails.application.config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+
+        resource '*',
+          headers: :any,
+          methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      end
+    end
   end
 end

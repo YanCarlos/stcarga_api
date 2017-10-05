@@ -36,7 +36,7 @@ class AuthenticationController < ApplicationController
 		res = {
 			message: 'acceso_denegado'
 		}
-		render json: res, status: 201
+		render json: res, status: 401
 	end
 
 end
