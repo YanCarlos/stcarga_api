@@ -28,7 +28,7 @@ module Api::V1
     private
 
     def authenticate_token
-      User.find_by(token: params[:token])
+      User.find_by(token: request.headers[:HTTP_USER_TOKEN])
     end
   end
 end
