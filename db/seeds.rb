@@ -40,10 +40,20 @@ def create_container
   )
 end 
 
+def create_product
+  Product.create!(
+    nombre: Faker::Food.dish,
+    referencia: Faker::Number.number(6),
+    descripcion: Faker::Lorem.sentence(6),
+  )
+end
+
 
 User.delete_all
 Naviera.delete_all
 Container.delete_all
-1.times {create_admin}
-5.times {create_naviera}
-10.times {create_container}
+Product.delete_all
+1.times{create_admin}
+5.times{create_naviera}
+10.times{create_container}
+15.times{create_product}

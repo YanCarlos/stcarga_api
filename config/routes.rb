@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :employees
       resources :containers
       resources :navieras
+      resources :products
     end
   end
 end
