@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :users
       resources :employees
       resources :containers
+      resources :navieras
     end
   end
 end

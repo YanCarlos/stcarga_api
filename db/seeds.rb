@@ -12,9 +12,9 @@ def create_admin
     nombre: 'Admin',
     cedula: '1234567890',
     telefono: Faker::Number.number(10),
-    email: Faker::Internet.email,
+    email: 'admin@stcarga.com',
     direccion: Faker::Address.street_address,
-    password: '123456',
+    password: '1234567890',
     token: Faker::Crypto.md5,
     activo: true
   })
@@ -22,5 +22,28 @@ def create_admin
   u.be_admin
 end
 
+def create_naviera
+  Naviera.create!(
+    nombre: Faker::Company.name,
+    telefono: Faker::Number.number(10),
+    nota: Faker::Lorem.sentence(3)
+  )
+end
+
+def create_container
+  Container.create!(
+    codigo: Faker::Number.number(10),
+    entregado: false,
+    fecha_entrega: Date.today,
+    fecha_limite_devolucion: Date.today + (Faker::Number.number(1).to_i).week,
+    naviera_id: Naviera.order('RANDOM()').limit(1)[0].id
+  )
+end 
+
+
 User.delete_all
-1.times { create_admin}
+Naviera.delete_all
+Container.delete_all
+1.times {create_admin}
+5.times {create_naviera}
+10.times {create_container}

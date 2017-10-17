@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171016065304) do
+ActiveRecord::Schema.define(version: 20171017030421) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,13 +18,20 @@ ActiveRecord::Schema.define(version: 20171016065304) do
 
   create_table "containers", force: :cascade do |t|
     t.string "codigo"
-    t.boolean "entregado"
-    t.date "fecha_entrada"
-    t.date "fecha_limite_salida"
+    t.boolean "entregado", default: false
+    t.date "fecha_devolucion"
+    t.date "fecha_limite_devolucion"
     t.date "fecha_entrega"
-    t.string "naviera"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "naviera_id"
+    t.index ["naviera_id"], name: "index_containers_on_naviera_id"
+  end
+
+  create_table "navieras", force: :cascade do |t|
+    t.string "nombre"
+    t.string "telefono"
+    t.string "nota"
   end
 
   create_table "roles", id: :serial, force: :cascade do |t|

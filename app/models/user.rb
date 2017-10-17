@@ -1,11 +1,7 @@
 class User < ApplicationRecord
   rolify
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
-
-  before_validation(on: :create) do
-    self.set_password
-  end
+  validates :password, presence: true, length: { minimum: 6 }, :on => :create
 
   def role
     self.roles[0].name
@@ -21,10 +17,6 @@ class User < ApplicationRecord
 
   def be_employee
     self.add_role :employee
-  end
-
-  def set_password
-    self.password = generate_string(10)
   end
 
   def reset_token
