@@ -1,7 +1,9 @@
 class User < ApplicationRecord
   rolify
   has_secure_password
+  has_many :containers, dependent: :destroy
   validates :password, presence: true, length: { minimum: 6 }, :on => :create
+
 
   def role
     self.roles[0].name

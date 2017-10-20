@@ -7,7 +7,11 @@ module Api::V1
     end
 
     def index
-      @containers = Container.all
+      if params[:codigo].nil?
+        @containers = Container.all
+      else
+        @containers = Container.filtrar(params)
+      end
       json_response @containers, @containers.count
     end
 
@@ -33,8 +37,9 @@ module Api::V1
         :entregado, 
         :fecha_devolucion, 
         :fecha_limite_devolucion, 
-        :fecha_entrega,
-        :naviera_id
+        :inicio_de_mora,
+        :ingreso_a_bodega,
+        :user_id
       )
     end
 

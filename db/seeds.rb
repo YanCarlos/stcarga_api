@@ -8,7 +8,7 @@
 
 
 def create_admin
-  u = User.new({
+  a = User.new({
     nombre: 'Admin',
     cedula: '1234567890',
     telefono: Faker::Number.number(10),
@@ -18,42 +18,49 @@ def create_admin
     token: Faker::Crypto.md5,
     activo: true
   })
-  u.save!
-  u.be_admin
+  a.save!
+  a.be_admin
 end
 
-def create_naviera
-  Naviera.create!(
-    nombre: Faker::Company.name,
+def create_customer
+  c = User.new({
+    nombre: Faker::Simpsons.character.upcase,
+    cedula: Faker::Number.number(10),
     telefono: Faker::Number.number(10),
-    nota: Faker::Lorem.sentence(3)
-  )
+    email: Faker::Internet.email,
+    direccion: Faker::Address.street_address,
+    password: '1234567890',
+    token: Faker::Crypto.md5,
+    activo: true
+  })
+  c.save!
+  c.be_customer
 end
 
 def create_container
   Container.create!(
-    codigo: Faker::Number.number(10),
+    codigo: Faker::Lorem.characters(4).upcase + ' ' + Faker::Number.number(6) + ' ' + Faker::Number.number(1) ,
     entregado: false,
-    fecha_entrega: Date.today,
+    ingreso_a_bodega: Date.today,
+    inicio_de_mora: Date.today,
     fecha_limite_devolucion: Date.today + (Faker::Number.number(1).to_i).week,
-    naviera_id: Naviera.order('RANDOM()').limit(1)[0].id
+    user_id: User.order('RANDOM()').limit(1)[0].id
   )
 end 
 
 def create_product
   Product.create!(
-    nombre: Faker::Food.dish,
+    nombre: Faker::Food.dish.upcase,
     referencia: Faker::Number.number(6),
-    descripcion: Faker::Lorem.sentence(6),
+    descripcion: Faker::Lorem.sentence(6).upcase,
   )
 end
 
 
 User.delete_all
-Naviera.delete_all
 Container.delete_all
 Product.delete_all
 1.times{create_admin}
-5.times{create_naviera}
+3.times{create_customer}
 10.times{create_container}
 15.times{create_product}
