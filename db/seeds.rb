@@ -15,7 +15,9 @@ def create_admin
     email: 'admin@stcarga.com',
     direccion: Faker::Address.street_address,
     password: '1234567890',
+    password_confirmation: '1234567890',
     token: Faker::Crypto.md5,
+    email_de_registro_enviado: true,
     activo: true
   })
   a.save!
@@ -24,13 +26,17 @@ end
 
 def create_customer
   c = User.new({
-    nombre: Faker::Simpsons.character.upcase,
+    nombre: Faker::Company.name.upcase,
     cedula: Faker::Number.number(10),
     telefono: Faker::Number.number(10),
     email: Faker::Internet.email,
     direccion: Faker::Address.street_address,
     password: '1234567890',
+    password_confirmation: '1234567890',
     token: Faker::Crypto.md5,
+    nombre_contacto: Faker::Superhero.name.upcase,
+    telefono_contacto: Faker::Number.number(10),
+    email_de_registro_enviado: true,
     activo: true
   })
   c.save!

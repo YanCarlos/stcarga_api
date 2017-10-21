@@ -1,0 +1,14 @@
+default: &default
+  host: localhost
+  port: 3000
+  email_from: gerencia@stcarga.com
+  smtp_settings:
+    address:              "smtp.gmail.com"
+    port:                 587
+    domain:               'stcarga.com'
+    user_name:            'yancarlosmarinosorio@gmail.com'
+    password:             '123456123451234123121'
+    authentication:       "plain"
+    ssl:                  true
+    tls:                  true
+    enable_starttls_auto: true

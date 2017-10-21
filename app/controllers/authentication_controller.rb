@@ -29,9 +29,10 @@ class AuthenticationController < ApplicationController
 
   def set_user
     @user = (
-              User.find_by(email: params[:user]) || 
-              User.find_by(cedula: params[:user])
-            ) || User.find_by(token: params[:token])
+      User.find_by(email: params[:user]) || 
+      User.find_by(cedula: params[:user]) ||
+      User.find_by(token: params[:token])
+    )  
   end
 
 

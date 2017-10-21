@@ -52,6 +52,7 @@ group :development do
   gem 'pry'
   gem 'pry-remote'
   gem 'pry-stack_explorer'
+  gem 'letter_opener'
 end
 
 group :test do
@@ -66,6 +67,7 @@ gem 'bcrypt',         '3.1.11'
 gem 'faker'
 gem 'rack-cors', '~> 1.0', '>= 1.0.1'
 gem "rolify"
+gem 'haml'
 
 ruby "2.4.1"
 
