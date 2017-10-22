@@ -9,7 +9,7 @@ class User < ApplicationRecord
     if (self.new_record? && self.password.nil?) || self.email_de_registro_enviado == false
       self.password = generate_string(8)
       if self.persisted?
-        self.save!
+        self.update_attribute(:password, self.password)
       end
     end
 
