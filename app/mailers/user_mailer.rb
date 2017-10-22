@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default :from => "gerencia@stcarga.com"
+  default :from => ENV['EMAIL_FROM']
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
