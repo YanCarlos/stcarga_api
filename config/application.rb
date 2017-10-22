@@ -27,11 +27,11 @@ module StcargaApi
       end
     end
   
-    app_yml = YAML.load(ERB.new(File.read("#{Rails.root}/config/application.yml")).result).symbolize_keys
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.smtp_settings = app_yml[:default]['smtp_settings'].symbolize_keys
-    ActionMailer::Base.smtp_settings = app_yml[:default]['smtp_settings'].symbolize_keys
-    config.action_mailer.default_options = { from: app_yml[:default]['email_from'] }
-    ActionMailer::Base.default_options = { from: app_yml[:default]['email_from'] }
+    # app_yml = YAML.load(ERB.new(File.read("#{Rails.root}/config/application.yml")).result).symbolize_keys
+    # config.action_mailer.delivery_method = :smtp
+    # config.action_mailer.smtp_settings = app_yml[:default]['smtp_settings'].symbolize_keys
+    # ActionMailer::Base.smtp_settings = app_yml[:default]['smtp_settings'].symbolize_keys
+    # config.action_mailer.default_options = { from: app_yml[:default]['email_from'] }
+    # ActionMailer::Base.default_options = { from: app_yml[:default]['email_from'] }
   end
 end

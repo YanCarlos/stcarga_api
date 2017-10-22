@@ -68,6 +68,6 @@ gem 'faker'
 gem 'rack-cors', '~> 1.0', '>= 1.0.1'
 gem "rolify"
 gem 'haml'
-
+gem "figaro"
 ruby "2.4.1"
 
