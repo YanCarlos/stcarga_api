@@ -8,6 +8,9 @@ class User < ApplicationRecord
   def validate_model
     if (self.new_record? && self.password.nil?) || self.email_de_registro_enviado == false
       self.password = generate_string(8)
+      if self.persisted?
+        self.save!
+      end
     end
 
     if self.has_role? :customer
