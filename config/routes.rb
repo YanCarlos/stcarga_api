@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :containers
       resources :customers
       resources :products
+      resources :drivers
     end
   end
 end

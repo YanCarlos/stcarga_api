@@ -6,6 +6,8 @@ class User < ApplicationRecord
   after_save :after_save_event
 
   def validate_model
+    raise CustomError, 'Ya hay un usuario registrado con este email.' if email_exists?
+
     if (self.new_record? && self.password.nil?) || self.email_de_registro_enviado == false
       self.password = generate_string(8)
       if self.persisted?
@@ -31,10 +33,17 @@ class User < ApplicationRecord
     if self.has_role? :customer
       email_from_register_was_sent if UserMailer.customer_registered(self).deliver_now
     end  
+    if self.has_role? :employee
+      email_from_register_was_sent if UserMailer.employee_registered(self).deliver_now
+    end
     return self 
   end
 
 
+  def email_exists?
+    found = User.find_by(:email => self.email)
+    found and found != self
+  end
 
   def role
     self.roles[0].name

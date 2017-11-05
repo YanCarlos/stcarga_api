@@ -45,19 +45,7 @@ module Api::V1
     end
 
     def filtrar
-      return if params[:string].nil? && params[:activo].nil?
-      if params[:activo] == 'false' || 'true'
-        @customers = User.where("activo = '#{params[:activo]}' and nombre_contacto is not null")
-      end
-      if params[:string]
-        query = "(lower(nombre) like '%#{params[:string].downcase}%' or 
-                 lower(nombre_contacto) like '%#{params[:string].downcase}%' or
-                 lower(email) like '%#{params[:string].downcase}%' )"
-        @customers = User.where(
-          query + 'and nombre_contacto is not null'
-        )
-      end
-      @customers
+      @customers = Filter::Customer.do params
     end
 
   end

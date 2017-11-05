@@ -43,6 +43,21 @@ def create_customer
   c.be_customer
 end
 
+def create_employee
+  e = User.new({
+    nombre: Faker::Company.name.upcase,
+    telefono: Faker::Number.number(10),
+    email: Faker::Internet.email,
+    password: '1234567890',
+    password_confirmation: '1234567890',
+    token: Faker::Crypto.md5,
+    email_de_registro_enviado: true,
+    activo: true
+  })
+  e.save!
+  e.be_employee
+end
+
 def create_container
   Container.create!(
     codigo: Faker::Lorem.characters(4).upcase + ' ' + Faker::Number.number(6) + ' ' + Faker::Number.number(1) ,
@@ -62,11 +77,24 @@ def create_product
   )
 end
 
+def create_driver
+  Driver.create!(
+    nombre: Faker::Superhero.name.upcase ,
+    telefono: Faker::Number.number(10),
+    cedula: Faker::Number.number(10),
+    placa: Faker::Lorem.characters(5).upcase,
+    trailer: Faker::Lorem.characters(6).upcase
+  )
+end
+
 
 User.delete_all
 Container.delete_all
 Product.delete_all
+Driver.delete_all
 1.times{create_admin}
 3.times{create_customer}
+2.times{create_employee}
 10.times{create_container}
 15.times{create_product}
+3.times{create_driver}

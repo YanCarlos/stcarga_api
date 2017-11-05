@@ -2,7 +2,7 @@ class AuthenticationController < ApplicationController
   before_action :set_user, only: [:autenthicate_user, :logout_user]
 
   def autenthicate_user
-    if @user and @user.authenticate params[:password] and @user.generate_token
+    if user_validate?
       res = {
         nombre: @user.nombre,
         token: @user.token,
@@ -41,6 +41,10 @@ class AuthenticationController < ApplicationController
       message: 'acceso_denegado'
     }
     render json: res, status: 401
+  end
+
+  def user_validate?
+    @user and @user.authenticate params[:password] and @user.generate_token and @user.activo?
   end
 
 end
