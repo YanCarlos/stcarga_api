@@ -3,7 +3,7 @@ module Api::V1
     include Concerns::Response
     include Concerns::ExceptionHandler
 
-    before_action :authenticate_user!
+    #before_action :authenticate_user!
 
     def authenticate_user!
       return true if authenticate_token

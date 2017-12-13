@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171028031320) do
+ActiveRecord::Schema.define(version: 20171211223140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,31 @@ ActiveRecord::Schema.define(version: 20171028031320) do
     t.string "trailer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "import_products", force: :cascade do |t|
+    t.bigint "import_id"
+    t.bigint "product_id"
+    t.string "identificacion"
+    t.bigint "container_id"
+    t.decimal "paquetes"
+    t.decimal "unidad_por_paquete"
+    t.decimal "total_unidades"
+    t.decimal "total_paquete"
+    t.decimal "peso_neto"
+    t.decimal "peso_bruto"
+    t.index ["container_id"], name: "index_import_products_on_container_id"
+    t.index ["import_id"], name: "index_import_products_on_import_id"
+    t.index ["product_id"], name: "index_import_products_on_product_id"
+  end
+
+  create_table "imports", force: :cascade do |t|
+    t.string "codigo"
+    t.date "fecha"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_imports_on_user_id"
   end
 
   create_table "navieras", force: :cascade do |t|
@@ -89,4 +114,8 @@ ActiveRecord::Schema.define(version: 20171028031320) do
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
+  add_foreign_key "import_products", "containers"
+  add_foreign_key "import_products", "imports"
+  add_foreign_key "import_products", "products"
+  add_foreign_key "imports", "users"
 end
