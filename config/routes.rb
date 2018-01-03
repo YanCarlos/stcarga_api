@@ -13,8 +13,12 @@ Rails.application.routes.draw do
       resources :customers
       resources :products
       resources :drivers
-      resources :imports
+      resources :imports do
+        resources :dispatchs
+      end
       resources :import_products
+
+      resources :dispatchs
     end
   end
 end
