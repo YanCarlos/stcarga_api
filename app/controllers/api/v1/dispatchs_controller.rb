@@ -9,7 +9,7 @@ module Api::V1
 
     def index
       unless filtrar
-        @dispatchs = @import.dispatchs
+        @dispatchs = Dispatch.dispatchs
       end
       json_response @dispatchs, @dispatchs.count
     end
