@@ -1,3 +1,622 @@
-<h2 style="margin:auto;">
-	Este es el sitio web del api de stcarga
-</h2>
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Stcarga | Operador logistico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Operadores logisticos en la ciudad de Buenaventura valle del cauca." />
+  <meta name="keywords" content="operadores, logisticos, Buenaventura, valle" />
+  <meta name="author" content="stcarga.com.co" />
+
+    <!-- Facebook and Twitter integration -->
+  <meta property="og:title" content=""/>
+  <meta property="og:image" content=""/>
+  <meta property="og:url" content=""/>
+  <meta property="og:site_name" content=""/>
+  <meta property="og:description" content=""/>
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:url" content="" />
+  <meta name="twitter:card" content="" />
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+  <body>
+  <header role="banner" id="fh5co-header">
+    <div class="fluid-container">
+      <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <!-- Mobile Toggle Menu Button -->
+          <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+          <div id="ribbon">
+            <a class="logo-content" href="/">
+              <%= image_tag "logo.png", class: "img-responsive logo" %>
+            </a> 
+          </div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#" data-nav-section="home"><span>Inicio</span></a></li>
+            <li><a href="#" data-nav-section="us"><span>Nosotros</span></a></li>
+            <li><a href="#" data-nav-section="services"><span>Servicios</span></a></li>
+            <li><a href="#" data-nav-section="contact-us"><span>Contactenos</span></a></li>
+            <li class="call-to-action"><a href="#"><span>Area de empleados</span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="fh5co-home" data-section="home" data-stellar-background-ratio="0.5">
+    <div class="gradient"></div>
+    <div class="container">
+      <div class="text-wrap">
+        <div class="text-inner">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h1 class="to-animate">¡Tenemos el mejor servicio de operación logistica!</h1>
+              <h2 class="to-animate">contactenos para que compruebe porque tenemos el mejor servico de logistica de Buenaventura.</h2>
+              <div class="call-to-action">
+                <a href="#services" class="demo to-animate" >Ver servicios</a>
+                <a href="#" class="download to-animate">Contactar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fh5co-services" data-section="us">
+    <div class="fh5co-services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 section-heading text-center">
+            <h2 class="to-animate">¿Quienes somos?</h2>
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 subtext">
+                <h3 class="to-animate">Somos una empresa dedicada a la operación logística contando para ello con la Infraestructura adecuada para esta actividad, ofreciéndoles a nuestros clientes responsabilidad y vocación de servicio, con el objetivo de mantener la constante innovación, creatividad y desarrollo de nuestros servicios, consolidando relaciones comerciales duraderas con el incansable afán de mantener siempre a nuestros clientes satisfechos, asi mismo contribuir con la generación de recursos que fortalezcan nuestra región, y es por esto que recalcamos  tanto nuestros valores coorporativos. </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box-services">
+              <i class="icon-eye to-animate-2"></i>
+              <div class="fh5co-post to-animate">
+                <h3>Transparencia</h3>
+                <p>Realizamos nuestra gestión de forma objetiva, clara y verificable.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <div class="box-services">
+              <i class="icon-people to-animate-2"></i>
+              <div class="fh5co-post to-animate">
+                <h3>Equidad</h3>
+                <p>Procedemos con justicia, igualdad e imparcialidad, buscando un impacto social positivo e inclusivo.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <div class="box-services">
+              <i class="icon-flag to-animate-2"></i>
+              <div class="fh5co-post to-animate">
+                <h3>Respeto</h3>
+                <p>Interactuamos reconociendo los intereses colectivos, la diversidad individual, la sostenibilidad de los recursos naturales y laInstitucionalidad.</p>
+              </div>
+            </div>
+      </div>
+    </div>
+  </section>  
+
+
+  <section id="fh5co-explore" data-section="explore">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 section-heading text-center">
+          <h2 class="to-animate">Explore Our Products</h2>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 subtext to-animate">
+              <h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="fh5co-explore">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-push-4 to-animate-2">
+            <%= image_tag "work_1.png", class: "img-responsive" %>
+            
+          </div>
+          <div class="col-md-4 col-md-pull-8 to-animate-2">
+            <div class="mt">
+              <h3>Real Project For Real Solutions</h3>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. </p>
+              <ul class="list-nav">
+                <li><i class="icon-check2"></i>Far far away, behind the word</li>
+                <li><i class="icon-check2"></i>There live the blind texts</li>
+                <li><i class="icon-check2"></i>Separated they live in bookmarksgrove</li>
+                <li><i class="icon-check2"></i>Semantics a large language ocean</li>
+                <li><i class="icon-check2"></i>A small river named Duden</li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="fh5co-explore fh5co-explore-bg-color">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-pull-1 to-animate-3">
+            <%= image_tag "work_1.png", class: "img-responsive" %>
+          </div>
+          <div class="col-md-4 to-animate-3">
+            <div class="mt">
+              <div>
+                <h4><i class="icon-people"></i>Real Project For Real Solutions</h4>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+              </div>
+              <div>
+                <h4><i class="icon-video2"></i>Real Project For Real Solutions</h4>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+              </div>
+              <div>
+                <h4><i class="icon-shield"></i>Real Project For Real Solutions</h4>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="fh5co-testimony" data-section="testimony">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 to-animate">
+          <div class="wrap-testimony">
+            <div class="owl-carousel-fullwidth">
+              <div class="item">
+                <div class="testimony-slide active text-center">
+                  <figure>
+                    <%= image_tag "person2.jpg", class: "img-responsive" %>
+                  </figure>
+                  <blockquote>
+                    <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
+                  </blockquote>
+                  <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-slide active text-center">
+                  <figure>
+                    <%= image_tag "person3.jpg", class: "img-responsive" %>
+                  </figure>
+                  <blockquote>
+                    <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
+                  </blockquote>
+                  <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-slide active text-center">
+                  <figure>
+                    <%= image_tag "person2.jpg", class: "img-responsive" %>
+                  </figure>
+                  <blockquote>
+                    <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
+                  </blockquote>
+                  <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="getting-started getting-started-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 to-animate">
+          <h3>Getting Started</h3>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+        </div>
+        <div class="col-md-6 to-animate-2">
+          <div class="call-to-action text-right">
+            <a href="#" class="sign-up">Sign Up For Free</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <section id="fh5co-pricing" data-section="pricing">
+    <div class="fh5co-pricing">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 section-heading text-center">
+            <h2 class="to-animate">Plans Built For Every One</h2>
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 subtext">
+                <h3 class="to-animate">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove. </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="pricing">
+            <div class="col-md-3">
+              <div class="price-box to-animate-2">
+                <h2 class="pricing-plan">Starter</h2>
+                <div class="price"><sup class="currency">$</sup>9<small>/month</small></div>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                <a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="price-box to-animate-2">
+                <h2 class="pricing-plan">Basic</h2>
+                <div class="price"><sup class="currency">$</sup>27<small>/month</small></div>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                <a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="price-box to-animate-2 popular">
+                <h2 class="pricing-plan pricing-plan-offer">Pro <span>Best Offer</span></h2>
+                <div class="price"><sup class="currency">$</sup>74<small>/month</small></div>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                <a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="price-box to-animate-2">
+                <h2 class="pricing-plan">Unlimited</h2>
+                <div class="price"><sup class="currency">$</sup>140<small>/month</small></div>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                <a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 to-animate">
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. <a href="#">Learn More</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="fh5co-services" data-section="services">
+    <div class="fh5co-services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 section-heading text-center">
+            <h2 class="to-animate">We Offer Services</h2>
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 subtext">
+                <h3 class="to-animate">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove. </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box-services">
+              <i class="icon-chemistry to-animate-2"></i>
+              <div class="fh5co-post to-animate">
+                <h3>Hand-crafted with Detailed</h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in.</p>
+              </div>
+            </div>
+
+            <div class="box-services">
+              <i class="icon-energy to-animate-2"></i>
+              <div class="fh5co-post to-animate">
+                <h3>Light and Fast</h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box-services">
+              <i class="icon-trophy to-animate-2"></i>
+              <div class="fh5co-post to-animate">
+                <h3>Award-winning Landing Page</h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in.</p>
+              </div>
+            </div>
+
+            <div class="box-services">
+              <i class="icon-paper-plane to-animate-2"></i>
+              <div class="fh5co-post to-animate">
+                <h3>Sleek and Smooth Animation</h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box-services">
+              <i class="icon-people to-animate-2"></i>
+              <div class="fh5co-post to-animate">
+                <h3>Satisfied &amp; Happy Clients</h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in.</p>
+              </div>
+            </div>
+
+            <div class="box-services">
+              <i class="icon-screen-desktop to-animate-2"></i>
+              <div class="fh5co-post to-animate">
+                <h3>Looks Amazing on Devices</h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="call-to-action text-center to-animate"><a href="#" class="btn btn-learn">Learn More</a></div>
+      </div>
+    </div>
+  </section>  
+
+  <section id="fh5co-team" data-section="team">
+    <div class="fh5co-team">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 section-heading text-center">
+            <h2 class="to-animate">Meet The Team</h2>
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 subtext">
+                <h3 class="to-animate">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove. </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="team-box text-center to-animate-2">
+              <div class="user"><%= image_tag "person4.jpg", class: "img-responsive" %></div>
+              <h3>Roger Garfield</h3>
+              <span class="position">Co-Founder, Lead Developer</span>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+              <ul class="social-media">
+                <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
+                <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
+                <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
+                <li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
+                <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="team-box text-center to-animate-2">
+              <div class="user"><%= image_tag "person2.jpg", class: "img-responsive" %></div>
+              <h3>Kevin Steve</h3>
+              <span class="position">Co-Founder, Product Designer</span>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+              <ul class="social-media">
+                <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
+                <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
+                <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
+                <li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
+                <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="team-box text-center to-animate-2">
+              <div class="user"><%= image_tag "person3.jpg", class: "img-responsive" %></div>
+              <h3>Ross Standford</h3>
+              <span class="position">Full Stack Developer</span>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+              <ul class="social-media">
+                <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
+                <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
+                <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
+                <li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
+                <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fh5co-faq" data-section="faq">
+    <div class="fh5co-faq">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 section-heading text-center">
+            <h2 class="to-animate">Common Questions</h2>
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 subtext">
+                <h3 class="to-animate">Everything you need to know before you get started</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="box-faq to-animate-2">
+              <h3>What is Union?</h3>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            </div>
+            <div class="box-faq to-animate-2">
+              <h3>I have technical problem, who do I email? </h3>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            </div>
+            <div class="box-faq to-animate-2">
+              <h3>How do I use Bato features?</h3>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="box-faq to-animate-2">
+              <h3>What language are available?</h3>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            </div>
+            <div class="box-faq to-animate-2">
+              <h3>Can I have a username that is already taken?</h3>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            </div>
+            <div class="box-faq to-animate-2">
+              <h3>Is Union free?</h3>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="fh5co-trusted" data-section="trusted">
+    <div class="fh5co-trusted">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 section-heading text-center">
+            <h2 class="to-animate">Trusted By</h2>
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 subtext">
+                <h3 class="to-animate">We’re trusted by these popular companies</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+           <div class="col-md-2 col-sm-3 col-xs-6 col-sm-offset-0 col-md-offset-1">
+            <div class="partner-logo to-animate-2">
+              <%= image_tag "logo1.png", class: "img-responsive" %>
+            </div>
+           </div>
+            <div class="col-md-2 col-sm-3 col-xs-6">
+              <div class="partner-logo to-animate-2">
+                <%= image_tag "logo2.png", class: "img-responsive" %>
+            </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6">
+              <div class="partner-logo to-animate-2">
+                <%= image_tag "logo3.png", class: "img-responsive" %>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6">
+              <div class="partner-logo to-animate-2">
+               <%= image_tag "logo4.png", class: "img-responsive" %>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-12 col-xs-12">
+              <div class="partner-logo to-animate-2">
+                <%= image_tag "logo5.png", class: "img-responsive" %>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="getting-started getting-started-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 to-animate">
+          <h3>Getting Started</h3>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+        </div>
+        <div class="col-md-6 to-animate-2">
+          <div class="call-to-action text-right">
+            <a href="#" class="sign-up">Sign Up For Free</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fh5co-footer" role="contentinfo" data-section="contact-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 to-animate">
+          <h3 class="section-title">About Us</h3>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+          <p class="copy-right">&copy; 2015 Union Free Template. <br>All Rights Reserved. <br>
+            Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a>
+            Demo Images: <a href="http://unsplash.com/" target="_blank">Unsplash</a> &amp; Dribbble Image by <a href="https://dribbble.com/tibi_neamu" target="_blank">Tiberiu</a>
+          </p>
+        </div>
+
+        <div class="col-md-4 to-animate">
+          <h3 class="section-title">Our Address</h3>
+          <ul class="contact-info">
+            <li><i class="icon-map-marker"></i>198 West 21th Street, Suite 721 New York NY 10016</li>
+            <li><i class="icon-phone"></i>+ 1235 2355 98</li>
+            <li><i class="icon-envelope"></i><a href="#">info@yoursite.com</a></li>
+            <li><i class="icon-globe2"></i><a href="#">www.yoursite.com</a></li>
+          </ul>
+          <h3 class="section-title">Connect with Us</h3>
+          <ul class="social-media">
+            <li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
+            <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
+            <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 to-animate">
+          <h3 class="section-title">Drop us a line</h3>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name" class="sr-only">Name</label>
+              <input type="name" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="email" class="sr-only">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="message" class="sr-only">Message</label>
+              <textarea class="form-control" id="message" rows="7" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" id="btn-submit" class="btn btn-send-message btn-md" value="Send Message">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </body>
+</html>
+

@@ -69,5 +69,13 @@ gem 'rack-cors', '~> 1.0', '>= 1.0.1'
 gem "rolify"
 gem 'haml'
 gem "figaro"
+
+gem 'popper_js', '~> 1.12.9'
+gem 'jquery-rails'
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'modernizr-rails'
+gem "font-awesome-rails"
+gem 'icomoon_rails'
+
 ruby "2.4.1"
 

@@ -1,0 +1,35 @@
+#fh5co-header #navbar li.call-to-action a {
+  border: 1px solid #ff3b30 !important;
+  background-color: #ff3b30 !important;
+  color: #fff !important;
+}
+
+#fh5co-header #navbar li.call-to-action a:hover {
+  border: 1px solid #ff3b3099 !important;
+  background-color: #ff3b3099 !important;
+  color: #fff !important;
+}
+
+.logo{
+  max-width: 100%;
+  max-height: 100%;
+}
+.logo-content{
+  width: 164px;
+  position: absolute;
+  left: -80px;
+  top: 21px;
+}
+  
+#ribbon {
+  width:0; 
+  height:20vh; 
+  position: absolute;
+  border-right:100px solid #525252;
+  border-left:100px solid #525252;
+  border-bottom:30px solid transparent;
+}
+
+#fh5co-home{
+  background-image: url('first.jpg');
+}
