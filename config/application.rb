@@ -16,7 +16,7 @@ module StcargaApi
     # -- all .rb files in that directory are automatically loaded.
     config.autoload_paths += %W(#{config.root}/app/services)
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
-    config.serve_static_assets = true
+    config.api_only = true
     config.debug_exception_response_format = :default
     Rails.application.config.middleware.insert_before 0, Rack::Cors do
       allow do
