@@ -1,13 +1,26 @@
-#fh5co-header #navbar li.call-to-action a {
-  border: 1px solid #ff3b30 !important;
-  background-color: #ff3b30 !important;
+li.call-to-action a {
+  border: 1px solid #eb8100 !important;
+  background-color: #eb8100 !important;
+  color: #fff !important;
+}
+li.call-to-action a:hover {
+  border: 1px solid #eb810099 !important;
+  background-color: #eb810099 !important;
   color: #fff !important;
 }
 
-#fh5co-header #navbar li.call-to-action a:hover {
-  border: 1px solid #ff3b3099 !important;
-  background-color: #ff3b3099 !important;
+#fh5co-header.navbar-fixed-top #navbar li.area  a {
   color: #fff !important;
+}
+
+#fh5co-home .gradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.60);
 }
 
 .logo{
