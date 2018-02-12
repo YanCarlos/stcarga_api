@@ -11,17 +11,12 @@ module StcargaApi
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
-    config.api_only = false
-    config.assets.enabled = true
-    config.serve_static_assets = true
-    config.assets.version = 0.1
-
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
     config.autoload_paths += %W(#{config.root}/app/services)
-    config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.autoload_paths += %W(#{config.root}/app/uploaders)
+    config.api_only = false
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
     config.debug_exception_response_format = :default
+    config.assets.enabled = true
     Rails.application.config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'
