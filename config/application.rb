@@ -13,6 +13,7 @@ module StcargaApi
 
     config.api_only = false
     config.assets.enabled = true
+    config.serve_static_assets = true
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
