@@ -72,7 +72,7 @@ gem "figaro"
 
 gem 'popper_js', '~> 1.12.9'
 gem 'jquery-rails'
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap'
 gem 'modernizr-rails'
 gem "font-awesome-rails"
 gem 'icomoon_rails'
